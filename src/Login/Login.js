@@ -4,9 +4,11 @@ import CommonInputField from "../Common/CommonInputField";
 import "./styles.css";
 import { emailValidator, selectValidator } from "../Common/Validation";
 import { login } from "../API-Service/action";
+import { useNavigate } from "react-router-dom";
 import { CommonToaster } from "../Common/CommonToaster";
 
 export default function Login() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
   const [password, setPassword] = useState("");
@@ -33,7 +35,11 @@ export default function Login() {
     try {
       const response = await login(payload);
       console.log("login response", response);
+      localStorage.setItem("Accesstoken", response?.data?.token || "");
       CommonToaster(response.data.message, "success");
+      setTimeout(() => {
+        navigate("/users");
+      }, 500);
     } catch (error) {
       CommonToaster(error?.response?.data?.message, "error");
     }

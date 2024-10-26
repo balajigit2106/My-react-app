@@ -1,0 +1,9 @@
+.sidebar_names_container {
+  display: flex;
+  margin-bottom: 12px;
+}
+.sidebar_logout_container {
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+}
