@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { getTeams, getUsers } from "../API-Service/action";
-import { TextField } from "@mui/material";
 
 export default function Users() {
   useEffect(() => {
@@ -35,7 +34,6 @@ export default function Users() {
   return (
     <div>
       <p>Users</p>
-      <TextField label="Name" />
     </div>
   );
 }

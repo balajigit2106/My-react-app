@@ -20,6 +20,15 @@ api.interceptors.request.use(
   }
 );
 
+export const login = async (payload) => {
+  try {
+    const response = await api.post("/api/login", payload);
+    return response;
+  } catch (error) {
+    throw error;
+  }
+};
+
 export const getUsers = async (payload) => {
   try {
     const response = await api.get("/api/getUsers", {

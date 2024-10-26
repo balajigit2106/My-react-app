@@ -1,0 +1,38 @@
+.commonInputfield_container {
+  position: relative;
+  transition: all 0.3s ease;
+}
+.commonfield_label {
+  font-weight: 500 !important;
+  margin-bottom: 6px !important;
+}
+.common_inputfield {
+  height: 36px !important;
+}
+.common_inputfield:focus {
+  border-color: #9c75efaf !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #9c75ef34 !important;
+}
+.common_errorinputfield {
+  height: 36px !important;
+  border-color: rgb(255, 77, 79) !important;
+}
+.common_errorinputfield:focus {
+  border-color: rgb(255, 77, 79) !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(255, 77, 80, 0.137) !important;
+}
+.commoninput_errormessagediv {
+  position: absolute;
+  left: 0%;
+  opacity: 0;
+}
+.commoninput_errormessage_activediv {
+  top: 99%;
+  /* transform: translateY(2%); */
+  transform: translateX(2%);
+  opacity: 1;
+  position: absolute;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
