@@ -22,7 +22,7 @@ const Sidebar = () => {
       navigate("/login");
       setShowLayout(false);
     }
-  });
+  }, []);
 
   // Toggle sidebar visibility
   const toggleSidebar = () => setIsOpen(!isOpen);
