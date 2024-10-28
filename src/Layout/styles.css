@@ -7,3 +7,11 @@
   bottom: 10px;
   display: flex;
 }
+.ant-menu-dark .ant-menu-item-selected {
+  background-color: #9c75ef !important;
+}
+.logout_container {
+  position: absolute;
+  bottom: 20px;
+  color: white;
+}

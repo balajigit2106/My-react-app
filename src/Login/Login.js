@@ -36,6 +36,10 @@ export default function Login() {
       const response = await login(payload);
       console.log("login response", response);
       localStorage.setItem("Accesstoken", response?.data?.token || "");
+      localStorage.setItem(
+        "organizationId",
+        response?.data.userDetails.organizationId
+      );
       CommonToaster(response.data.message, "success");
       setTimeout(() => {
         navigate("/users");
@@ -60,38 +64,40 @@ export default function Login() {
                 <p className="login_specialtext">
                   Hey, welcome back to your special place
                 </p>
-                <CommonInputField
-                  label="Email"
-                  onChange={(event) => {
-                    setEmail(event.target.value);
-                    if (validationTrigger) {
-                      setEmailError(emailValidator(event.target.value));
-                    }
-                  }}
-                  value={email}
-                  error={emailError}
-                />
-                <CommonInputField
-                  label="Password"
-                  style={{ marginTop: "22px" }}
-                  onChange={(event) => {
-                    setPassword(event.target.value);
-                    if (validationTrigger) {
-                      setPasswordError(selectValidator(event.target.value));
-                    }
-                  }}
-                  value={password}
-                  error={passwordError}
-                />
-                <div style={{ display: "flex", justifyContent: "center" }}>
-                  <button
-                    type="button"
-                    className="btn btn-primary signin_button"
-                    onClick={handleSubmit}
-                  >
-                    Sign In
-                  </button>
-                </div>
+                <form>
+                  <CommonInputField
+                    label="Email"
+                    onChange={(event) => {
+                      setEmail(event.target.value);
+                      if (validationTrigger) {
+                        setEmailError(emailValidator(event.target.value));
+                      }
+                    }}
+                    value={email}
+                    error={emailError}
+                  />
+                  <CommonInputField
+                    label="Password"
+                    style={{ marginTop: "22px" }}
+                    onChange={(event) => {
+                      setPassword(event.target.value);
+                      if (validationTrigger) {
+                        setPasswordError(selectValidator(event.target.value));
+                      }
+                    }}
+                    value={password}
+                    error={passwordError}
+                  />
+                  <div style={{ display: "flex", justifyContent: "center" }}>
+                    <button
+                      type="submit"
+                      className="btn btn-primary signin_button"
+                      onClick={handleSubmit}
+                    >
+                      Sign In
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>

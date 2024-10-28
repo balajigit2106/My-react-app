@@ -49,3 +49,13 @@ export const getTeams = async (payload) => {
     throw error;
   }
 };
+
+// user
+export const createUser = async (payload) => {
+  try {
+    const response = await api.post("/api/createUser", payload);
+    return response;
+  } catch (error) {
+    throw error;
+  }
+};

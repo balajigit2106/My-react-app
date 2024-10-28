@@ -7,7 +7,10 @@
   margin-bottom: 6px !important;
 }
 .common_inputfield {
-  height: 36px !important;
+  height: 32px !important;
+}
+.common_inputfield:hover {
+  border-color: #d9d9d9 !important;
 }
 .common_inputfield:focus {
   border-color: #9c75efaf !important;
@@ -15,7 +18,7 @@
   box-shadow: 0 0 0 0.25rem #9c75ef34 !important;
 }
 .common_errorinputfield {
-  height: 36px !important;
+  height: 32px !important;
   border-color: rgb(255, 77, 79) !important;
 }
 .common_errorinputfield:focus {
@@ -35,4 +38,23 @@
   opacity: 1;
   position: absolute;
   transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+.commonbutton {
+  width: 100%;
+  height: 32px;
+  background-color: #9c75ef !important;
+  border-color: #9c75ef !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  font-weight: 600 !important;
+  border-radius: 7px !important;
+  color: white !important;
+}
+.commonbutton:hover {
+  opacity: 0.7;
+}
+.commonbutton:active {
+  box-shadow: 3px 2px 22px 1px #9c75ef;
+  transform: scale(0.9);
 }

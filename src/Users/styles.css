@@ -1,0 +1,50 @@
+.totalusers_heading {
+  font-weight: 600;
+  font-size: 20px !important;
+}
+.userstable_header th {
+  background: #9c75ef !important;
+  color: white !important;
+}
+.userstable tbody tr {
+  background-color: #f8f9fa; /* Light gray color for all rows */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.userstable tbody tr td {
+  color: #000; /* Text color */
+}
+.adduser_button {
+  width: 114px;
+  height: 32px;
+  background-color: #9c75ef !important;
+  border-color: #9c75ef !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  font-weight: 600 !important;
+  border-radius: 7px !important;
+  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+}
+.adduser_button:hover {
+  opacity: 0.7;
+}
+.adduser_button:active {
+  box-shadow: 3px 2px 22px 1px #9c75ef;
+  transform: scale(0.9);
+}
+.usertable_actionbutton {
+  outline: 0 !important;
+  border: 0.5px solid rgba(128, 128, 128, 0.514);
+  background-color: transparent;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+}
+.users_tableeditbutton {
+  outline: 0 !important;
+  border: none !important;
+  background-color: transparent !important;
+}
